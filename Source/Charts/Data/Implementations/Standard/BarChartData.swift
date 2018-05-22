@@ -45,8 +45,8 @@ open class BarChartData: BarLineScatterCandleBubbleChartData
             return
         }
         
-        let max = maxEntryCountSet
-        let maxEntryCount = max?.entryCount ?? 0
+        
+        
         
         let groupSpaceWidthHalf = groupSpace / 2.0
         let barSpaceHalf = barSpace / 2.0
@@ -56,7 +56,7 @@ open class BarChartData: BarLineScatterCandleBubbleChartData
         
         let interval = groupWidth(groupSpace: groupSpace, barSpace: barSpace)
 
-        for i in stride(from: 0, to: maxEntryCount, by: 1)
+        for i in stride(from: xMin, to: xMax+1, by: 1)
         {
             let start = fromX
             fromX += groupSpaceWidthHalf
